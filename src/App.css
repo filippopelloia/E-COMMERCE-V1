@@ -9,3 +9,21 @@
 /* body{
 
 } */
+
+.navbar{
+  display: flex;
+  align-items: center;
+  height: 15vh;
+  background-color: #262626;
+}
+
+ul li{
+  display: inline-block;
+  margin: 3vh 5.5vh;
+  border: 1px solid red;
+  padding: 10px 22.5px;
+}
+
+ul li a{
+  color: #fff;
+}
