@@ -1,7 +1,31 @@
-import React from 'react'
+import {useState} from 'react'
+import CardProduct from './CardProduct.jsx';
 
 export default function Shop() {
+
+  const [products, setProducts] = useState([
+    {id: 0, name: 'DOOM Eternal', quantity: 0},
+    {id: 1, name: 'Final Fantasy XVI', quantity: 0},
+    {id: 2, name: 'Starfield', quantity: 0},
+  ])
+
+  function addToCart(id){
+    console.log(id);
+  }
+
+  const showProducts = products.map(item => {
+    return <CardProduct key={item.id} 
+                        idProduct={item.id}
+                        title={item.name}
+                        addToCart={addToCart}
+            />
+  })
+
   return (
-    <div>Shop</div>
+    <div className="shop">
+      <div className="products-section">
+        {showProducts}
+      </div>
+    </div>
   )
 }

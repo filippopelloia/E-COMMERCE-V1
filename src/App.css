@@ -10,9 +10,14 @@
 
 } */
 
+h1, li a{
+  color: lightgray;
+}
+
 .navbar{
   display: flex;
   align-items: center;
+  justify-content: center;
   height: 15vh;
   background-color: #262626;
 }
@@ -24,6 +29,63 @@ ul li{
   padding: 10px 22.5px;
 }
 
-ul li a{
+.shop{
+  display: flex;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+.products-section{
+  gap:35px;
+  width: 90%;
+  max-width: 100vh;
+  /* background-color: purple; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card{
+  height: 35vh;
+  background-color: pink;
+  width: 27.5vh;
+  border: 2px solid #262626;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.image{
+  width: 100%;
+  height: 22.5vh;
+  background-color: greenyellow;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.info{
+  display: grid;
+  justify-content: center;
+  padding-top: 7.5px;
+}
+
+.info > h3{
+  text-align: center;
+}
+
+.btn{
+  padding: 7.5px 12.5px;
+  background-color: aqua;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  border-radius: 5px;
+}
+
+.btn:hover{
+  background-color: #000000;
   color: #fff;
 }
+
+/* ul li a{
+  color: #fff;
+} */
