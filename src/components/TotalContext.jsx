@@ -1,9 +1,13 @@
 import {useState, createContext} from 'react'
 
-export const CartTotalContext = createContext({totalAmount: 0});
+export const CartTotalContext = createContext(null);
 export default function TotalContext(props) {
 
-  const [totalAmount, setTotalAmount] = useState(0)
+  const [products, setProducts] = useState([
+    {id: 0, name: 'DOOM Eternal', quantity: 0},
+    {id: 1, name: 'Final Fantasy XVI', quantity: 0},
+    {id: 2, name: 'Starfield', quantity: 0},
+  ])
 
   function addToCart(id) {
     setProducts(prevProducts => 
@@ -11,11 +15,10 @@ export default function TotalContext(props) {
         item.id === id ? { ...item, quantity: item.quantity + 1 } : item
       )
     );
-    setTotalAmount(prevTotalAmount => prevTotalAmount + 1);
   }  
 
   return (
-    <CartTotalContext.Provider value={{totalAmount, addToCart}}>
+    <CartTotalContext.Provider value={{products, addToCart}}>
         {props.children}
     </CartTotalContext.Provider>
   )

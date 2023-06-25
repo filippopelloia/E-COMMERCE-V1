@@ -9,7 +9,6 @@ import Cart from './components/Cart.jsx'
 import './App.css'
 
 function App() {
-
   return (
     <TotalContext>
       <Router>

@@ -1,10 +1,19 @@
-import React, {useState, useContext} from 'react'
+import React, {useState, useContext, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import {CartTotalContext} from './TotalContext.jsx';
 
 export default function Navbar() {
 
-  const {totalAmount} = React.useContext(CartTotalContext);
+  const {products} = React.useContext(CartTotalContext);
+  const [totalAmount, setTotalAmount] = useState(0);
+
+
+  useEffect(() => {
+    setTotalAmount(prevTotalAmount => prevTotalAmount + 1);
+  }, [products])
+
+  // console.log(products);
+
 
   return (
     <div className='navbar'>
