@@ -9,23 +9,6 @@ export default function Shop() {
     {id: 2, name: 'Starfield', quantity: 0},
   ])
 
-  // function addToCart(id){
-  //   console.log(id);
-  // }
-
-  function addToCart(id){
-    setProducts(prevProducts => {
-      const updatedProducst = prevProducts.map(item => {
-        if(item.id === id){
-          return {...item, quantity: item.quantity + 1}
-        }
-        return item;
-      })
-
-      return updatedProducst;
-    });
-  }
-
   function addToCart(id) {
     setProducts(prevProducts => prevProducts.map(item => item.id === id ? { ...item, quantity: item.quantity + 1 } : item));
   }  
