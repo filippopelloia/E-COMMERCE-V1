@@ -95,6 +95,11 @@ ul li{
   color: #fff;
 }
 
+.checkout{
+  background-color: blue;
+  color: #fff;
+}
+
 .cart{
   display: grid;
   justify-content: center;
@@ -124,11 +129,8 @@ ul li{
   font-size: 1.7em;
 }
 
-/* .cart-container{
+.cart-bottom{
+  margin-top: 15vh;
   display: flex;
   justify-content: center;
-} */
-
-/* ul li a{
-  color: #fff;
-} */
+}

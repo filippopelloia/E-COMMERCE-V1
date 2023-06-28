@@ -29,13 +29,21 @@ export default function TotalContext(props) {
     );
   }  
 
-
+  
+//TOTAL AMOUNT SHOP + NAVBAR
   useEffect(() => {
     // Calcola il conteggio totale dei prodotti
     const count = products.reduce((total, product) => total + product.quantity, 0);
     setTotalAmount(count);
   }, [products]);
 
+
+//TOTAL AMOUNT CART
+  useEffect(() => {
+    // Calcola il conteggio totale dei prodotti
+    const count = cart.reduce((total, product) => total + product.quantity, 0);
+    setTotalAmount(count);
+  }, [cart]);
 
 
   //VA A RIEMPIRE LO STATE PER CART

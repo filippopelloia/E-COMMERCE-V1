@@ -22,6 +22,14 @@ export default function Cart() {
       <div className='cart-container'>
         {showCart}
       </div>
+
+
+      {cart.length > 0 && <div  className='cart-bottom'>
+        <button className='btn checkout'>
+          <h4>Checkout</h4>
+        </button>
+      </div>}
+
     </div>
   )
 }
