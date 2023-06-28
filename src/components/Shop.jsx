@@ -12,6 +12,7 @@ export default function Shop() {
                         idProduct={item.id}
                         quantity={item.quantity}
                         title={item.name}
+                        color={item.color}
             />
   })
 
